@@ -169,9 +169,9 @@ NodeRbt<T>* TreeRbt<T>::find(NodeRbt<T>* x, T key) const
     if (x == NULL || x->key == key)
         return x;
     if (key < x->key)
-        return search(x->left, key);
+        return find(x->left, key);
     else
-        return search(y->right, key);
+        return find(y->right, key);
 }
 
 template<class T>
